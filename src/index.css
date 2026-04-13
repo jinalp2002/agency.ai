@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  font-family: "Manrope", sans-serif;
+  /* agar manrope run nahi hua toh sans-serif run hoga */
+  cursor: none;
+}
