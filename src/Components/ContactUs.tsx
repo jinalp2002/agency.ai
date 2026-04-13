@@ -38,10 +38,10 @@ const ContactUs = () => {
                 toast.error(data.message)
             }
         } catch (error) { //error is a variable when error comes true the error is come on (erro)
-            if (error instanceof Error) { //it check error is really of javascript object
-                toast.error(error.message)
+            if (error instanceof Error) { //it check error is really of javascript object if yes then (error.message)
+                toast.error(error.message) //exact error msg eg.password is not valid
             } else {
-                toast.error("Something went wrong")
+                toast.error("Something went wrong") //backup error msg(unknown msg)
             }
         }
 
@@ -56,7 +56,7 @@ const ContactUs = () => {
             <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full">
                 <div>
                     <p className="mb-2 text-sm font-medium">Your Name</p>
-                    <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
+                    <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:text-black">
                         <img src={assets.person_icon} alt="" />
                         <input type="text" name="name" placeholder="Enter your name"
                             className="w-full p-3 text-sm outline-none" />
@@ -64,13 +64,13 @@ const ContactUs = () => {
                 </div>
                 <div>
                     <p className="mb-2 text-sm font-medium">Email id</p>
-                    <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
+                    <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:text-black">
                         <img src={assets.email_icon} alt="" />
                         <input type="email" name="email" placeholder="Enter your email"
                             className="w-full p-3 text-sm outline-none" />
                     </div>
                 </div>
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-2 dark:text-black">
                     <p className="mb-2 text-sm font-medium">Message</p>
                     <textarea name="message" required rows={8} placeholder="Enter your message" className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600"></textarea>
                 </div>

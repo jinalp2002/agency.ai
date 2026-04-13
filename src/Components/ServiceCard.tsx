@@ -23,6 +23,7 @@ const ServiceCard = ({ service, index }: Props) => {
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const bounds = divRef.current!.getBoundingClientRect(); //element(div).size and position of element
 
+
         //current ! => matlab ke div null nathi 
         setPosition({
             x: e.clientX - bounds.left, //left to right
